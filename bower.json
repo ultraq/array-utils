@@ -19,5 +19,10 @@
 	"main": "array-utils.js",
 	"moduleType": [
 		"es6"
+	],
+	"ignore": [
+		"/test",
+		".*",
+		"package.json"
 	]
 }
