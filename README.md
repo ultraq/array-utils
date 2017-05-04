@@ -10,6 +10,22 @@ A collection of array utilities, meant as a zero-dependency way of working with
 arrays.
 
 
+Installation
+------------
+
+Via npm:
+
+```
+npm install @ultraq/array-utils --save
+```
+
+Via bower:
+
+```
+bower install https://github.com/ultraq/array-utils.git --save
+```
+
+
 API
 ---
 
