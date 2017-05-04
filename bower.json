@@ -1,0 +1,23 @@
+{
+	"name": "array-utils",
+	"description": "A collection utilities for JavaScript arrays",
+	"authors": [
+		"Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)"
+	],
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ultraq/array-utils.git"
+	},
+	"keywords": [
+		"es6",
+		"array",
+		"utilities",
+		"flatten",
+		"range"
+	],
+	"main": "array-utils.js",
+	"moduleType": [
+		"es6"
+	]
+}

@@ -1,0 +1,34 @@
+{
+	"name": "@ultraq/array-utils",
+	"version": "1.0.0",
+	"description": "A collection of utilities for JavaScript arrays",
+	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ultraq/array-utils.git"
+	},
+	"keywords": [
+		"array",
+		"utilities",
+		"flatten",
+		"range"
+	],
+	"main": "array-utils.node.js",
+	"module": "array-utils.js",
+	"scripts": {
+		"build": "rollup --input array-utils.js --format cjs --output array-utils.node.js",
+		"lint": "eslint array-utils.js test",
+		"test": "npm run lint && mocha --require babel-register",
+		"prepublish": "npm run build"
+	},
+	"devDependencies": {
+		"babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+		"babel-register": "^6.24.1",
+		"chai": "^3.5.0",
+		"eslint": "^3.19.0",
+		"eslint-config-ultraq": "^1.0.1",
+		"mocha": "^3.2.0",
+		"rollup": "^0.41.6"
+	}
+}
