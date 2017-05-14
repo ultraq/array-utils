@@ -3,6 +3,7 @@ array-utils
 ===========
 
 [![Build Status](https://travis-ci.org/ultraq/array-utils.svg?branch=master)](https://travis-ci.org/ultraq/array-utils)
+[![Coverage Status](https://coveralls.io/repos/github/ultraq/array-utils/badge.svg?branch=master)](https://coveralls.io/github/ultraq/array-utils?branch=master)
 [![npm](https://img.shields.io/npm/v/@ultraq/array-utils.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/array-utils)
 [![License](https://img.shields.io/github/license/ultraq/array-utils.svg?maxAge=2592000)](https://github.com/ultraq/array-utils/blob/master/LICENSE.txt)
 
