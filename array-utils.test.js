@@ -14,20 +14,19 @@
  * limitations under the License.
  */
 
-/* eslint-env mocha */
-import {flatten, range} from '../array-utils';
-import {assert} from 'chai';
+/* eslint-env jest */
+import {flatten, range} from './array-utils';
 
 /**
  * Tests for the array utilities.
  */
-describe('Arrays', function() {
+describe('ArrayUtils', function() {
 
 	describe('#flatten', function() {
 
 		it('Flattens a nested array', function() {
 			let result = flatten([1, [2, [[3], 4], 5]]);
-			assert.deepEqual(result, [1, 2, 3, 4, 5]);
+			expect(result).toEqual([1, 2, 3, 4, 5]);
 		});
 	});
 
@@ -35,12 +34,12 @@ describe('Arrays', function() {
 
 		it('Returns a range of values from start to finish', function() {
 			let result = range(2, 5);
-			assert.deepEqual(result, [2, 3, 4]);
+			expect(result).toEqual([2, 3, 4]);
 		});
 
 		it('Returns a range of values incrementing by the specified value', function() {
 			let result = range(2, 10, 3);
-			assert.deepEqual(result, [2, 5, 8]);
+			expect(result).toEqual([2, 5, 8]);
 		});
 	});
 });
