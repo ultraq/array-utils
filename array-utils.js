@@ -43,3 +43,22 @@ export function range(start, end, step = 1) {
 
 	return Array.apply(0, Array(Math.ceil((end - start) / step))).map((empty, index) => index * step + start);
 }
+
+/**
+ * Remove and return the first item from `array` that matches the predicate
+ * function.
+ * 
+ * @param {Array} array
+ * @param {Function} predicate
+ *   Invoked with the array item.
+ * @return {Object} The matching item, or `null` if no match was found.
+ */
+export function remove(array, predicate) {
+
+	return array.find((item, index) => {
+		if (predicate(item)) {
+			array.splice(index, 1);
+			return item;
+		}
+	});
+}

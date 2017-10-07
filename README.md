@@ -44,3 +44,12 @@ Creates an array of numbers from the starting value (inclusive) to the end
  - **start**: The value to start at, the first item in the returned array.
  - **end**: The value to end with, the last item in the returned array.
  - **step**: The increment/gap between values, defaults to 1.
+
+### remove(array, predicate)
+
+Remove and return the first item from `array` that matches the predicate
+function.
+
+ - **array**: The array to search and remove an item from
+ - **predicate**: Function to test each item of the array with.  If it returns a
+   truthy value for the item, then that item is removed and returned.

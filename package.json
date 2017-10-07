@@ -12,7 +12,8 @@
 		"array",
 		"utilities",
 		"flatten",
-		"range"
+		"range",
+		"remove"
 	],
 	"main": "array-utils.node.js",
 	"module": "array-utils.js",

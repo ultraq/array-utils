@@ -15,7 +15,7 @@
  */
 
 /* eslint-env jest */
-import {flatten, range} from './array-utils';
+import {flatten, range, remove} from './array-utils';
 
 /**
  * Tests for the array utilities.
@@ -24,7 +24,7 @@ describe('ArrayUtils', function() {
 
 	describe('#flatten', function() {
 
-		it('Flattens a nested array', function() {
+		test('Flattens a nested array', function() {
 			let result = flatten([1, [2, [[3], 4], 5]]);
 			expect(result).toEqual([1, 2, 3, 4, 5]);
 		});
@@ -32,14 +32,24 @@ describe('ArrayUtils', function() {
 
 	describe('#range', function() {
 
-		it('Returns a range of values from start to finish', function() {
+		test('Returns a range of values from start to finish', function() {
 			let result = range(2, 5);
 			expect(result).toEqual([2, 3, 4]);
 		});
 
-		it('Returns a range of values incrementing by the specified value', function() {
+		test('Returns a range of values incrementing by the specified value', function() {
 			let result = range(2, 10, 3);
 			expect(result).toEqual([2, 5, 8]);
+		});
+	});
+
+	describe('#remove', function() {
+
+		test('Removes matching item', function() {
+			let array = [1, 2, 3];
+			let result = remove(array, item => item === 2);
+			expect(array).toEqual([1, 3]);
+			expect(result).toBe(2);
 		});
 	});
 });
