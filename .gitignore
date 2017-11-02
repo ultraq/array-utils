@@ -1,5 +1,5 @@
 /.idea
 /coverage
 /node_modules
-array-utils.node.js
+array-utils.node.js*
 npm-debug.log
