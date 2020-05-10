@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/array-utils",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"description": "A collection of utilities for JavaScript arrays",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -15,24 +15,26 @@
 		"range",
 		"remove"
 	],
-	"main": "array-utils.node.js",
-	"module": "array-utils.js",
+	"module": "array-utils.es.js",
+	"main": "array-utils.cjs.js",
 	"scripts": {
-		"lint": "eslint array-utils.js test",
+		"lint": "eslint '*.js'",
 		"test": "npm run lint && jest",
 		"coverage": "cat ./coverage/lcov.info | coveralls",
-		"build": "babel --source-maps true array-utils.js --out-file array-utils.node.js",
+		"build": "npm run build:cjs && npm run build:es",
+		"build:cjs": "BABEL_ENV=cjs babel array-utils.js --out-file array-utils.cjs.js --source-maps",
+		"build:es": "BABEL_ENV=es babel array-utils.js --out-file array-utils.es.js --source-maps",
 		"prepublish": "npm run build"
 	},
 	"devDependencies": {
-		"babel-cli": "^6.26.0",
-		"babel-preset-env": "^1.6.1",
-		"coveralls": "^2.13.1",
-		"eslint": "^4.8.0",
-		"eslint-config-ultraq": "^2.0.0",
-		"jest": "^21.2.1"
+		"@babel/cli": "^7.8.4",
+		"@babel/preset-env": "^7.9.6",
+		"coveralls": "^3.1.0",
+		"eslint": "^7.0.0",
+		"eslint-config-ultraq": "^2.3.2",
+		"jest": "^26.0.1"
 	},
 	"engines": {
-		"node": ">=6.5.0"
+		"node": ">=10"
 	}
 }
