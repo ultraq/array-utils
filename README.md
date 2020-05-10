@@ -19,12 +19,6 @@ Via npm:
 npm install @ultraq/array-utils --save
 ```
 
-Via bower:
-
-```
-bower install https://github.com/ultraq/array-utils.git --save
-```
-
 
 API
 ---
