@@ -15,7 +15,11 @@
  */
 
 /**
- * Flattens an arrays of arrays into a single array.
+ * Flattens an array of arrays of infinite depth into a single-dimension array.
+ * 
+ * > This is now natively in JavaScript as the `flat` method on an Array
+ * > instance.  You can check MDN for which browsers have access to this
+ * > feature.  If you can't use `flat`, then this method will do the job 🙂
  * 
  * @param {Array} array
  * @return {Array} Flattened array.
