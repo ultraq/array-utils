@@ -25,7 +25,7 @@
 		"build": "npm run build:cjs && npm run build:es",
 		"build:cjs": "BABEL_ENV=cjs babel array-utils.js --out-file array-utils.cjs.js --source-maps",
 		"build:es": "BABEL_ENV=es babel array-utils.js --out-file array-utils.es.js --source-maps",
-		"prepublish": "npm run build"
+		"prepublishOnly": "npm run build"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.10.5",
