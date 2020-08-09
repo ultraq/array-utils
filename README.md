@@ -16,7 +16,7 @@ Installation
 Via npm:
 
 ```
-npm install @ultraq/array-utils --save
+npm install @ultraq/array-utils
 ```
 
 
