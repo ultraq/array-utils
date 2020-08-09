@@ -25,7 +25,6 @@
  * @return {Array} Flattened array.
  */
 export function flatten(array) {
-
 	return array.reduce((accumulator, value) => {
 		return accumulator.concat(Array.isArray(value) ? flatten(value) : value);
 	}, []);
@@ -44,7 +43,6 @@ export function flatten(array) {
  * @return {Array} An array encompassing the given range.
  */
 export function range(start, end, step = 1) {
-
 	return Array.apply(0, Array(Math.ceil((end - start) / step))).map((empty, index) => index * step + start);
 }
 
@@ -58,7 +56,6 @@ export function range(start, end, step = 1) {
  * @return {Object} The matching item, or `null` if no match was found.
  */
 export function remove(array, predicate) {
-
 	return array.find((item, index) => {
 		if (predicate(item)) {
 			array.splice(index, 1);

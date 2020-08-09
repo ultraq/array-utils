@@ -20,7 +20,7 @@ import {flatten, range, remove} from './array-utils';
 /**
  * Tests for the array utilities.
  */
-describe('ArrayUtils', function() {
+describe('array-utils', function() {
 
 	describe('#flatten', function() {
 
