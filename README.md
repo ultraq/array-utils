@@ -28,8 +28,8 @@ API
 Flattens an array of arrays of infinite depth into a single-dimension array.
 
 > This is now natively in JavaScript as the `flat` method on an Array instance.
-> You can check MDN for which browsers have access to this feature.  If you
-> can't use `flat`, then this method will do the job 🙂
+> [Check MDN for which browsers have access to this feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat).
+> If you can't use `flat`, then this method will do the job 🙂
 
  - **array**: The array of arrays to flatten
 
