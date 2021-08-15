@@ -2,7 +2,7 @@
 array-utils
 ===========
 
-[![Build Status](https://travis-ci.com/ultraq/array-utils.svg?branch=master)](https://travis-ci.com/ultraq/array-utils)
+[![Build Status](https://github.com/ultraq/array-utils/actions/workflows/build.yml/badge.svg)](https://github.com/ultraq/array-utils/actions)
 [![Coverage Status](https://coveralls.io/repos/github/ultraq/array-utils/badge.svg?branch=master)](https://coveralls.io/github/ultraq/array-utils?branch=master)
 [![npm](https://img.shields.io/npm/v/@ultraq/array-utils.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/array-utils)
 [![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/array-utils)](https://bundlephobia.com/result?p=@ultraq/array-utils)
