@@ -17,6 +17,7 @@
 	],
 	"module": "array-utils.es.js",
 	"main": "array-utils.cjs.js",
+	"types": "array-utils.d.ts",
 	"sideEffects": false,
 	"scripts": {
 		"lint": "eslint \"*.js\"",
