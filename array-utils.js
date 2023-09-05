@@ -16,44 +16,57 @@
 
 /**
  * Flattens an array of arrays of infinite depth into a single-dimension array.
- * 
+ *
  * > This is now natively in JavaScript as the `flat` method on an Array
  * > instance.  [Check MDN for which browsers have access to this feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat).
  * > If you can't use `flat`, then this method will do the job 🙂
- * 
- * @param {Array} array
- * @return {Array} Flattened array.
+ *
+ * @param {Array<any>} array
+ * @return {Array<any>} Flattened array.
  */
 export function flatten(array) {
-	return array.reduce((accumulator, value) => {
-		return accumulator.concat(Array.isArray(value) ? flatten(value) : value);
+	return array.reduce((acc, value) => {
+		return acc.concat(Array.isArray(value) ? flatten(value) : value);
 	}, []);
 }
 
 /**
  * Creates an array of numbers from the starting value (inclusive) to the end
  * (exclusive), with an optional step (the gap between values).
- * 
+ *
  * @param {Number} start
  *   The value to start at, the first item in the returned array.
  * @param {Number} end
  *   The value to end with, the last item in the returned array.
  * @param {Number} [step=1]
  *   The increment/gap between values, defaults to 1.
- * @return {Array} An array encompassing the given range.
+ * @return {number[]} An array encompassing the given range.
  */
 export function range(start, end, step = 1) {
 	return Array.apply(0, Array(Math.ceil((end - start) / step))).map((empty, index) => index * step + start);
 }
 
 /**
+ * A function to execute on each item in an array, returning truthy
+ * if the item passes whatever test is required for the use of this
+ * predicate.
+ *
+ * @template T
+ * @callback Predicate<T>
+ * @param {T} item
+ * @return {boolean}
+ */
+
+/**
  * Remove and return the first item from `array` that matches the predicate
  * function.
- * 
- * @param {Array} array
- * @param {Function} predicate
- *   Invoked with the array item.
- * @return {Object} The matching item, or `null` if no match was found.
+ *
+ * @template T
+ * @param {T[]} array
+ * @param {Predicate<T>} predicate
+ *   Function to test each item of the array with.  If it returns a truthy value
+ *   for the item, then that item is removed and returned.
+ * @return {T | undefined} The matching item, or `undefined` if no match was found.
  */
 export function remove(array, predicate) {
 	return array.find((item, index) => {
@@ -61,5 +74,6 @@ export function remove(array, predicate) {
 			array.splice(index, 1);
 			return item;
 		}
+		return false;
 	});
 }

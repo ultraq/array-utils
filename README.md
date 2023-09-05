@@ -3,7 +3,7 @@ array-utils
 ===========
 
 [![Build Status](https://github.com/ultraq/array-utils/actions/workflows/build.yml/badge.svg)](https://github.com/ultraq/array-utils/actions)
-[![Coverage Status](https://coveralls.io/repos/github/ultraq/array-utils/badge.svg?branch=main)](https://coveralls.io/github/ultraq/array-utils?branch=main)
+[![codecov](https://codecov.io/gh/ultraq/array-utils/branch/main/graph/badge.svg?token=FWOPN1XXZW)](https://codecov.io/gh/ultraq/array-utils)
 [![npm](https://img.shields.io/npm/v/@ultraq/array-utils.svg?maxAge=3600)](https://www.npmjs.com/package/@ultraq/array-utils)
 [![Bundlephobia minified size](https://img.shields.io/bundlephobia/min/@ultraq/array-utils)](https://bundlephobia.com/result?p=@ultraq/array-utils)
 

@@ -21,19 +21,22 @@
 	"scripts": {
 		"lint": "eslint \"*.js\"",
 		"test": "jest",
-		"build": "npm run build:cjs && npm run build:es",
+		"build": "npm run build:cjs && npm run build:es && npm run build:dts",
 		"build:cjs": "BABEL_ENV=cjs babel array-utils.js --out-file array-utils.cjs.js --source-maps",
 		"build:es": "BABEL_ENV=es babel array-utils.js --out-file array-utils.es.js --source-maps",
+		"build:dts": "tsc --allowJs --declaration --emitDeclarationOnly array-utils.js",
 		"prepublishOnly": "npm run build"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.14.8",
-		"@babel/preset-env": "^7.15.0",
-		"eslint": "^7.32.0",
+		"@babel/cli": "^7.22.15",
+		"@babel/preset-env": "^7.22.15",
+		"@types/jest": "^29.5.4",
+		"eslint": "^8.48.0",
 		"eslint-config-ultraq": "^2.4.0",
-		"jest": "^27.0.6"
+		"jest": "^29.6.4",
+		"typescript": "^5.2.2"
 	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=18"
 	}
 }

@@ -4,11 +4,12 @@
 		"ultraq"
 	],
 	"parserOptions": {
-		"ecmaVersion": 6,
+		"ecmaVersion": 2018,
 		"sourceType": "module"
 	},
 	"env": {
 		"browser": true,
-		"es6": true
+		"es6": true,
+		"node": true
 	}
 }
