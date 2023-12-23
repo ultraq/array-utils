@@ -1,12 +1,12 @@
-/* 
+/*
  * Copyright 2017, Emanuel Rabina (http://www.ultraq.net.nz/)
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,9 +17,9 @@
 /**
  * Flattens an array of arrays of infinite depth into a single-dimension array.
  *
- * > This is now natively in JavaScript as the `flat` method on an Array
- * > instance.  [Check MDN for which browsers have access to this feature](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat).
- * > If you can't use `flat`, then this method will do the job 🙂
+ * > This method is deprecated as it is now natively in JavaScript as the `flat`
+ * > method on an Array instance:
+ * > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
  *
  * @param {Array<any>} array
  * @return {Array<any>} Flattened array.
