@@ -21,6 +21,7 @@
  * > method on an Array instance:
  * > https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
  *
+ * @deprecated Can be replaced with `array.flat(Infinity)`
  * @param {Array<any>} array
  * @return {Array<any>} Flattened array.
  */

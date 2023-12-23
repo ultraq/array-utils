@@ -8,6 +8,9 @@ Changelog
     - Added `"type": "module"` so ESM is now the default
     - Package outputs defined using an `exports` map w/ `import` pointing to the
       main source and `require` to a transpiled version of the source
+ - Deprecate `flatten` method - it can be replaced by `array.flat(Infinity)`,
+   which has [baseline](https://github.com/web-platform-dx/web-features/blob/main/docs/baseline.md)
+   status.
 
 ### 3.0.1
  - Generated ES/CJS files didn't have the updated browser support targets, so
