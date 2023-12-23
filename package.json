@@ -1,6 +1,6 @@
 {
 	"name": "@ultraq/array-utils",
-	"version": "3.0.1",
+	"version": "3.1.0",
 	"description": "A collection of utilities for JavaScript arrays",
 	"author": "Emanuel Rabina <emanuelrabina@gmail.com> (http://www.ultraq.net.nz/)",
 	"license": "Apache-2.0",
@@ -15,22 +15,33 @@
 		"range",
 		"remove"
 	],
-	"module": "array-utils.es.js",
-	"main": "array-utils.cjs.js",
+	"type": "module",
+	"module": "array-utils.js",
+	"main": "array-utils.cjs",
 	"types": "array-utils.d.ts",
+	"exports": {
+		"import": "./array-utils.js",
+		"require": "./array-utils.cjs",
+		"types": "./array-utils.d.ts"
+	},
+	"files": [
+		"array-utils.js",
+		"array-utils.cjs",
+		"array-utils.d.ts",
+		"CHANGELOG.md"
+	],
 	"sideEffects": false,
 	"scripts": {
 		"lint": "eslint \"*.js\"",
 		"test": "jest",
-		"build": "npm run build:cjs && npm run build:es && npm run build:dts",
-		"build:cjs": "BABEL_ENV=cjs babel array-utils.js --out-file array-utils.cjs.js --source-maps",
-		"build:es": "BABEL_ENV=es babel array-utils.js --out-file array-utils.es.js --source-maps",
+		"build": "npm run build:cjs && npm run build:dts",
+		"build:cjs": "babel array-utils.js --out-file array-utils.cjs",
 		"build:dts": "tsc --allowJs --declaration --emitDeclarationOnly array-utils.js",
 		"prepublishOnly": "npm run build"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.22.15",
-		"@babel/preset-env": "^7.22.15",
+		"@babel/plugin-transform-modules-commonjs": "^7.23.3",
 		"@types/jest": "^29.5.4",
 		"eslint": "^8.48.0",
 		"eslint-config-ultraq": "^3.1.3",

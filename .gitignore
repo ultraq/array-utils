@@ -1,7 +1,5 @@
 /.idea
 /coverage
 /node_modules
-array-utils.cjs.js*
+array-utils.cjs
 array-utils.d.ts
-array-utils.es.js*
-npm-debug.log
