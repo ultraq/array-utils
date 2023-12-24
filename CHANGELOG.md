@@ -2,6 +2,10 @@
 Changelog
 =========
 
+### 3.1.1
+ - Fix [Masquerading as ESM](https://github.com/arethetypeswrong/arethetypeswrong.github.io/blob/main/docs/problems/FalseESM.md)
+   issue with the new package layout
+
 ### 3.1.0
  - Migrating to pure ESM for the next major version, the following internal
    changes have been made:
